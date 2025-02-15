@@ -84,6 +84,6 @@ async def handle_first_receive(matcher: Matcher, event: Event, msg: Message = Co
             
         gif_out = MIX_DIR / "out.gif"
         gif_frames[0].save(str(gif_out),
-                save_all=True, append_images=gif_frames[1:], optimize=False, duration=15, loop=0, transparency=0)
+                save_all=True, append_images=gif_frames[1:], optimize=False, duration=25, loop=0, transparency=0)
         
         await mix.finish(MessageSegment.image(gif_out.resolve().as_uri()))
